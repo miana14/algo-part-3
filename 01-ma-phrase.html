@@ -47,7 +47,7 @@
     <br/>
     <input type="text" id="sentence" placeholder="Votre phrase"/>
 
-    <button type="button" class="btn btn-primary" onclick="analyse()">
+    <button type="button" class="btn btn-primary" onclick="analyze()">
         Analyser la phrase
     </button>
 </div>
@@ -55,8 +55,13 @@
 <script type="text/javascript">
 
     function analyze() {
+        let sentence = document.getElementById("sentence").value;
+        let myarray = [sentence.length,sentence.at(5),sentence.slice(0,3),sentence.slice(-3)];
         // CODE HERE !
+        console.log(myarray);
+        
     }
+    analyze();
 
 </script>
 </body>
