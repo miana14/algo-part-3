@@ -57,18 +57,18 @@
     </div>
 
     <script type="text/javascript">
-        function countWords() {
+        /*function countWords() {
             let sentence = document.getElementById("sentence").value;
             let spaces = 0;
             for (let i = 0; i < sentence.length; i++) {
-                if (sentence.charAt(i) == " "){
+                if (sentence.charAt(i) == " ") {
                     spaces++;
                 }
 
                 console.log(spaces);
             }
         }
-        countWords();
+        countWords();*/
 
 
         /* let sentence = document.getElementById("sentence").value;
@@ -77,6 +77,25 @@
         console.log(myarray);b
         countWords();
         */
+
+        
+        function countWords () {
+            let sentence = document.getElementById("sentence").value;
+            let previousChar = " ";
+            let count = 0;
+
+            for ( let i=0; i < sentence.length ; i++) {
+                let currentChar = sentence.charAt(i);
+                if((currentChar !== " ") && (previousChar === " ")) {
+                    count++;
+                }
+                previousChar = currentChar;
+            }
+            console.log (`Le nombre de mots est ${count}`);
+        }
+        countWords ();
+
+        // replaceAll ou replace pour les caracteres de ponctuation
     </script>
 </body>
 
