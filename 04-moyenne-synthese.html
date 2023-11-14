@@ -111,7 +111,7 @@
         function refreshAverage() {
             // CODE HERE !
             let note = document.getElementById("note").value;
-            note = parseInt(note)
+            note = parseFloat(note)
             if ((note => 0) && (note <= 20)) {
                 notes.push(note)
                 return (average(notes)) + (displayArray(notes))
